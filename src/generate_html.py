@@ -3,11 +3,12 @@ Python script to generate HTML for a collaborative codespaces workshop session
 """
 
 import os
+import inspect
 
 from team import demo
 
 generated_list = [
-    getattr(demo, method)() for method in dir(demo) if not method.startswith("__")
+    getattr(demo, method)() for method in dir(demo) if not method.startswith("__") and "James" not in method
 ]
 
 CSS = """
@@ -20,7 +21,7 @@ body {
   --wp--preset--font-size--x-large: 42px;
   --wp--preset--font-size--normal: 16px;
   --wp--preset--font-size--huge: 42px;
-  --wp--preset--color--vivid-green-cyan: #00d084;
+  --wp--preset--color--vivid-green-cyan: #00d068;
 
   line-height: 1.6842;
 }
@@ -79,8 +80,10 @@ HTML = f"""
     <style>
       {CSS}
     </style>
+
 </head>
 <body>
+    <h1>All work and no play makes CGDS a dull lab - allegedly</h1>
     <div id="profiles">
       {GENERATED_HTML}
     </div>
@@ -101,3 +104,4 @@ amount = len(generated_list)
 print(
     f"HTML file 'team.html' has been generated with {amount} publications in {output_absolute_filepath}"
 )
+
