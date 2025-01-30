@@ -4,6 +4,7 @@ Module that contains methods of each workshop participant for their generated HT
 
 # pylint: disable=C0116
 
+
 def generate_angelina():
     return """
         <div class="profile" style="background-color: hotpink;">

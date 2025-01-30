@@ -14,7 +14,7 @@ Center's publications.
 
 ## How to run
 
-3. Run in terminal using Python3
+1. Run in terminal using Python3
 
    ```bash
    python3 src/generate_html.py
