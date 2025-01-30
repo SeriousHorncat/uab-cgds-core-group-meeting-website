@@ -34,7 +34,8 @@ def generate_rabab():
         </div>
 """
 
-def generate_Nilesh():
+
+def generate_Nilesh():  # pylint: disable=C0103
     return """
         <div class="profile" style="background-color: blue;">
           <h2>Nilesh</h2>
@@ -42,6 +43,7 @@ def generate_Nilesh():
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2BpTWuuL2IBm3al6xVpBuC?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 """
+
 
 def generate_sam():
     return """
@@ -52,7 +54,8 @@ def generate_sam():
         </div>
 """
 
-def generate_James():
+
+def generate_James():  # pylint: disable=C0103
     i = 0
 
     while True:
@@ -61,5 +64,5 @@ def generate_James():
 
         if i == 1000:
             break
-    
+
     return ""

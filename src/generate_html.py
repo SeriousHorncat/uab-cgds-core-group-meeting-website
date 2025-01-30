@@ -3,12 +3,13 @@ Python script to generate HTML for a collaborative codespaces workshop session
 """
 
 import os
-import inspect
 
 from team import demo
 
 generated_list = [
-    getattr(demo, method)() for method in dir(demo) if not method.startswith("__") and "James" not in method
+    getattr(demo, method)()
+    for method in dir(demo)
+    if not method.startswith("__") and "James" not in method
 ]
 
 CSS = """
@@ -104,4 +105,3 @@ amount = len(generated_list)
 print(
     f"HTML file 'team.html' has been generated with {amount} publications in {output_absolute_filepath}"
 )
-
