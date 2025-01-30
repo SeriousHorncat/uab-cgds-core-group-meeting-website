@@ -14,8 +14,7 @@ Center's publications.
 
 ## How to run
 
-1. Move your TSV exported from ReadCube `publications.csv` to the `config` directory and name it `publications.csv`.
-2. Run in terminal
+3. Run in terminal using Python3
 
    ```bash
    python3 src/generate_html.py

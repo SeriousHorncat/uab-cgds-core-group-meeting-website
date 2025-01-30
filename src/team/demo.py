@@ -1,5 +1,11 @@
+"""
+Module that contains methods of each workshop participant for their generated HTML code segment
+"""
+
+# pylint: disable=C0116
+
 def generate_angelina():
-  return """
+    return """
         <div class="profile" style="background-color: hotpink;">
           <h2>Angelina</h2>
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Black-Tailed_Prairie_Dog.jpg" alt="Alice's picture">
@@ -7,8 +13,9 @@ def generate_angelina():
         </div>
 """
 
+
 def alice():
-  return """
+    return """
         <div class="profile" style="background-color: lightblue;">
           <h2>Alice</h2>
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Black-Tailed_Prairie_Dog.jpg" alt="Alice's picture">
@@ -16,8 +23,9 @@ def alice():
         </div>
 """
 
+
 def charlie():
-  return """
+    return """
 
         <div class="profile" style="background-color: lightcoral;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Coat_types_3.jpg" alt="Charlie's picture">
@@ -25,8 +33,9 @@ def charlie():
         </div>
 """
 
+
 def bob():
-  return """
+    return """
         <div class="profile" style="background-color: lightgreen;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg" alt="Bob's picture">
             <h2>Bob</h2>

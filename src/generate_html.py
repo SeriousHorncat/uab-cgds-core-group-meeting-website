@@ -6,7 +6,9 @@ import os
 
 from team import demo
 
-generated_list = [getattr(demo, method)() for method in dir(demo) if not method.startswith('__')]
+generated_list = [
+    getattr(demo, method)() for method in dir(demo) if not method.startswith("__")
+]
 
 CSS = """
 <style>
@@ -67,7 +69,7 @@ dl a:visited {
 
 GENERATED_HTML = "\n".join(generated_list)
 
-html = f"""
+HTML = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +93,7 @@ with open(
     mode="w",
     encoding="utf-8",
 ) as file:
-    file.write(html)
+    file.write(HTML)
 
 output_absolute_filepath = os.path.abspath("team.html")
 
